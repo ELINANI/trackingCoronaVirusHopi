@@ -1,0 +1,67 @@
+<form #form ="ngForm" autocomplete="off" (submit) ="onSubmit(form)" style="background-color: #3C3258;"> 
+ <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="codeContamination" class ="form-control" #codeContamination ="ngModel" [(ngModel)] ="contaminationServic.contamination.codeContamination"   placeholder="codeContamination" required>
+ </div>
+ 
+ </div>
+  <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="codeClient" class ="form-control" #codeClient ="ngModel" [(ngModel)] ="contaminationServic.contamination.codeClient" placeholder="code Client" required>
+ </div>
+ </div>
+
+   <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="codeHopitale" class ="form-control" #codeHopitale ="ngModel" [(ngModel)] ="contaminationServic.contamination.codeHopitale" placeholder="code Hopitale" required>
+ </div>
+ </div>
+
+  <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="dateContamination" class ="form-control" #dateContamination ="ngModel" [(ngModel)] ="contaminationServic.contamination.dateContamination" placeholder="date Contamination" required>
+ </div>
+ </div>
+
+
+  
+ <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+ <select class ="form-control" name ="codeNiveau" #codeNiveau ="ngModel" [(ngModel)] ="contaminationServic.contamination.codeNiveau" required >
+      <option *ngFor="let niveau of niveauService.Niveaux" value="{{niveau.codeNiveau}}">{{niveau.typeNiveau}}</option>
+ </select>
+ </div>
+ </div>
+
+
+
+
+<div class="form-group">
+ <button class="btn-outline-danger btn-lg btn-block" type="submit">submit</button>
+</div>
+</form>

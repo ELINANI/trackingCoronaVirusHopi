@@ -1,0 +1,87 @@
+<form #form ="ngForm" autocomplete="off" (submit) ="onSubmit(form)" style="background-color: #3C3258;"> 
+ <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="codeClient" class ="form-control" #codeClient ="ngModel" [(ngModel)] ="service.client.codeClient"   placeholder="code Client" required>
+ </div>
+ 
+ </div>
+  <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="nomClient" class ="form-control" #nomClient ="ngModel" [(ngModel)] ="service.client.nomClient" placeholder="nomClient" required>
+ </div>
+ </div>
+
+   <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="prenomClient" class ="form-control" #prenomClient ="ngModel" [(ngModel)] ="service.client.prenomClient" placeholder="prenomClient" required>
+ </div>
+ </div>
+
+  <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="age" class ="form-control" #age ="ngModel" [(ngModel)] ="service.client.age" placeholder="age" required>
+ </div>
+ </div>
+
+<div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="sexeClient" class ="form-control" #sexeClient ="ngModel" [(ngModel)] ="service.client.sexeClient" placeholder="sexeClient" required>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+  <input name ="phoneClient" class ="form-control" #phoneClient ="ngModel" [(ngModel)] ="service.client.phoneClient" placeholder="phoneClient" required>
+ </div>
+ </div>
+
+
+  <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+ <select name ="codeQuartier" class ="form-control" #codeQuartier ="ngModel" [(ngModel)] ="service.client.codeQuartier" required >
+      <option  *ngFor="let quar of quartierService.Qaurtiers" value="{{quar.codeQuartier}}">{{quar.nomQuartier}}</option>
+ </select>
+ </div>
+ </div>
+
+
+
+<div class="form-group">
+ <button class="btn-outline-primary btn-lg btn-block" type="submit">submit</button>
+</div>
+</form>

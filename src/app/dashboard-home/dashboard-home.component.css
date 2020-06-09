@@ -1,0 +1,15 @@
+body {
+    background-color: #3C3258;
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+}
+ul li:first-of-type
+{
+    background-color: brown;
+}
+ul li:last-of-type{
+    margin-left: 20%;
+    background-color: black;
+}

@@ -1,0 +1,84 @@
+
+ <div class="form-group">
+ <div class="input-group">
+  <div class="input-group-prepend">
+  <div class="input-group-text bg-white">
+  <i class="fas fa-user"></i>
+ </div>
+ </div>
+ <select class ="form-control" name ="codeNiveau" #codeNiveau ="ngModel" [(ngModel)] ="service.client.codeNiveau" required >
+      <option *ngFor="let niveau of niveauService.Niveaux" value="{{niveau.codeNiveau}}">{{niveau.typeNiveau}}</option>
+ </select>
+ </div>
+ </div>
+
+
+
+
+
+ this.LineChart = new Chart('myChart', {
+      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:this.type,
+        datasets:[{
+          label:'Niveaux',
+          data:this.nombre,
+          //backgroundColor:'green',
+          backgroundColor:[
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)'
+          ],
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'Largest Cities In Massachusetts',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+    
+
+
+
+<div class="jumbotron" style="background-color: #3C3258;">
+ <h1 class="display-4 text-center" style="color :#FFA355">Dashboard</h1>
+ <hr>
+  <div class="row">
+    <div class="col-md-6">
+<app-dashboard></app-dashboard>
+  </div>
+  
+  <div class="col-md-6">
+<app-nombre-cas-par-sexe></app-nombre-cas-par-sexe>
+  </div> 
+  </div>
+</div>

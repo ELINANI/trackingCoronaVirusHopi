@@ -1,0 +1,20 @@
+<div class="table-box" style="background-color: #3C3258;">
+<table>
+ <tr>
+     <td>codeContamination</td>
+      <td>codeClient</td>
+       <td>codeHopitale</td>
+        <td>codeNiveau</td> 
+          <td>dateContamination</td>            
+ </tr>
+  <tr *ngFor="let conta of serviceContamination.Contaminations">
+     <td  (click) = "list(conta)">{{conta.codeContamination}}</td>
+      <td (click) = "list(conta)">{{conta.codeClient}}</td>
+       <td (click) = "list(conta)">{{conta.codeHopitale}}</td>
+        <td (click) = "list(conta)">{{conta.codeNiveau}}</td>
+         <td (click) = "list(conta)">{{conta.dateContamination}}</td>
+             <td><button class="btn-danger" (click) ="delete(conta.codeContamination)">Delete</button></td>
+ </tr>
+
+</table>
+</div>

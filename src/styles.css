@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+input.ng-touched.ng-invalid{
+    border-color: #f00;
+}
+input.ng-valid{
+    border-color: #0f0;
+}
+#toastr-container{
+    opacity: 1;
+}
+table tr:hover{
+    cursor: pointer;
+}
+
+.table-box{
+    height: 400px;
+    width: 470px;
+    overflow-y:scroll;
+
+}
+table, th, td{
+    border: 1px solid #FFA355;
+    border-collapse: collapse;
+}
+html,body {
+    background-color: #3C3258;
+}
