@@ -1,3 +1,5 @@
+ <input type="text" name="filter" [(ngModel)]="filter" class="form-control" (input) ="search()" placeholder ="search .."/>
+<br>
 <div class="table-box" style="background-color: #3C3258;">
 <table>
  <tr>
@@ -5,15 +7,17 @@
       <td>codeClient</td>
        <td>codeHopitale</td>
         <td>codeNiveau</td> 
-          <td>dateContamination</td>            
+          <td>dateContamination</td> 
+          <td>delete</td>            
  </tr>
+
   <tr *ngFor="let conta of serviceContamination.Contaminations">
-     <td  (click) = "list(conta)">{{conta.codeContamination}}</td>
-      <td (click) = "list(conta)">{{conta.codeClient}}</td>
+       <td  (click) = "list(conta)">{{conta.codeContamination}}</td>
+       <td (click) = "list(conta)">{{conta.codeClient}}</td>
        <td (click) = "list(conta)">{{conta.codeHopitale}}</td>
-        <td (click) = "list(conta)">{{conta.codeNiveau}}</td>
-         <td (click) = "list(conta)">{{conta.dateContamination}}</td>
-             <td><button class="btn-danger" (click) ="delete(conta.codeContamination)">Delete</button></td>
+       <td (click) = "list(conta)">{{conta.codeNiveau}}</td>
+       <td (click) = "list(conta)">{{conta.dateContamination}}</td>
+       <td><button class="btn-danger" (click) ="delete(conta.codeContamination)"><i class="fas fa-trash"></i></button></td>
  </tr>
 
 </table>

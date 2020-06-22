@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Ribeye&display=swap');
 body {
     background-color: #3C3258;
+    font-family: 'Ribeye';
 }
 div{
     background-color: #3C3258;

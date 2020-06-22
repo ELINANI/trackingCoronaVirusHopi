@@ -1,5 +1,8 @@
-#divChart{
-    display: block;
-    width: 400px;
-    height: 400px;
+@import url('https://fonts.googleapis.com/css?family=Ribeye&display=swap');
+body{
+    font-family: 'Ribeye';
+}
+#divChart{ 
+    width: 500px;
+    height: 500px;
 }

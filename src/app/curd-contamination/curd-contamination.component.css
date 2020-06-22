@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Ribeye&display=swap');
+body {
+    background-color: #3C3258;
+    font-family: 'Ribeye';
+}
+form .form-control{
+    background-color:transparent;
+    border: none;
+    border-bottom: 2px solid #AC1DAF;
+}
+form .input-group-text{
+    background-color:#AC1DAF;
+}
+form .btn-outline-danger{
+    width: 230px;
+    height: 45px;
+    font-family: 'Ribeye';
+    color: #FFA355;
+    border-color:  #AC1DAF;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color:#181261;
+}
+form .form-control:focus{
+  
+    border-color:  #FFA355;
+}
+form .input-group-text:focus form .btn-outline-primary{
+    background-color:#FFA355;
+}

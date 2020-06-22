@@ -1,0 +1,39 @@
+
+table, th, td{
+    border: 1px solid #FFA355;
+    border-collapse: collapse;
+   
+}
+
+.table-box table tr td {
+    width: 10px;
+}
+table .btn-danger{
+   margin-left: 10px;
+   background-color: crimson;
+}
+table .btn-danger .fa-trash{
+    color: #FFA355;
+ }
+ table tr:first-of-type td{
+     background-color: transparent;
+     color:  #FFA355;
+     height: 50px;
+ }
+ .table-box{
+     overflow-y: scroll;
+     height: 350px;
+     
+ }
+ input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #FFA355;
+    width: 300px;
+}
+input:focus{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #0f0;
+    width: 300px;
+}

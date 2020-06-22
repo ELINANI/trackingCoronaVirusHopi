@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class ListClientComponent implements OnInit {
 
   constructor(public service:ClientService,public toastr:ToastrService) { }
-
+ filter:string ;
   ngOnInit(): void {
     this.service.refreshList();
   }
@@ -29,5 +29,14 @@ export class ListClientComponent implements OnInit {
       })
     }
     
+  }
+  search(){   
+    if(this.filter != ""){
+      this.service.clients = this.service.clients.filter(res=>{
+         return res.codeClient.toLocaleLowerCase().match(this.filter.toLocaleLowerCase());
+       })
+    }else if(this.filter == "") {
+     this.service.refreshList();
+    }
   }
 }

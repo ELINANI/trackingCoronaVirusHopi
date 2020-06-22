@@ -28,20 +28,20 @@ export class DashboardComponent implements OnInit {
 }
 
 public loadChart():void {
-  this.LineChart = new Chart('myChart', {
+  this.LineChart = new Chart('Chart', {
     type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
     data:{
       labels:this.type,
       datasets:[{
-        label:'Niveaux',
+        label:'Liste',
         data:this.nombre,
         //backgroundColor:'green',
         backgroundColor:[
           'rgba(255, 99, 132, 0.6)',
-          'rgba(54, 162, 235, 0.6)',
+          'rgb(255, 0, 0)',
           'rgba(255, 206, 86, 0.6)',
           'rgba(75, 192, 192, 0.6)',
-          'rgba(153, 102, 255, 0.6)',
+          'rgb(0, 255, 0)',
           'rgba(255, 159, 64, 0.6)',
           'rgba(255, 99, 132, 0.6)'
         ],

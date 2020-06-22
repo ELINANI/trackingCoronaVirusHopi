@@ -1,26 +1,41 @@
-<div class="table-box" style="background-color: #3C3258;">
-<table>
- <tr>
-     <td>codeClient</td>
-      <td>nomClient</td>
-       <td>prenomClient</td>
-        <td>age</td>
-         <td>sexeClient</td>
-          <td>phoneClient</td>
-           <td>codeQuartier</td> 
-         
-            <td>Delete</td>
- </tr>
-  <tr *ngFor="let client of service.clients">
-     <td  (click) = "list(client)">{{client.codeClient}}</td>
-      <td (click) = "list(client)">{{client.nomClient}}</td>
-       <td (click) = "list(client)">{{client.prenomClient}}</td>
-        <td (click) = "list(client)">{{client.age}}</td>
-         <td (click) = "list(client)">{{client.sexeClient}}</td>
-          <td (click) = "list(client)">{{client.phoneClient}}</td>
-           <td (click) = "list(client)">{{client.codeQuartier}}</td>
-             <td><button class="btn-danger" (click) ="delete(client.codeClient)">Delete</button></td>
- </tr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+</head>
+<body>
+<input type="text" name="filter" [(ngModel)]="filter" class="form-control" (input) ="search()" placeholder ="search .."/>
+<br>
+  <div class="table-box" style="background-color: #3C3258;">
+    <table>
+     <tr>
+         <td>codeClient</td>
+          <td>nomClient</td>
+           <td>prenomClient</td>
+            <td>age</td>
+             <td>sexeClient</td>
+              <td>phoneClient</td>
+               <td>codeQuartier</td> 
+                <td>Delete</td>
+     </tr>
+      <tr *ngFor="let client of service.clients">
+         <td  (click) = "list(client)">{{client.codeClient}}</td>
+          <td (click) = "list(client)">{{client.nomClient}}</td>
+           <td (click) = "list(client)">{{client.prenomClient}}</td>
+            <td (click) = "list(client)">{{client.age}}</td>
+             <td (click) = "list(client)">{{client.sexeClient}}</td>
+              <td (click) = "list(client)">{{client.phoneClient}}</td>
+               <td (click) = "list(client)">{{client.codeQuartier}}</td>
+                 <td><button class="btn-danger" (click) ="delete(client.codeClient)"><i class="fas fa-trash"></i></button></td>
+     </tr>
+    
+    </table>
+    </div> 
+    <script>
 
-</table>
-</div>
+   </script>
+</body>
+</html>

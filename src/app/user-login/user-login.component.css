@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Ribeye&display=swap');
+header{
+    width: 100%;
+    height: 100vh;
+    background: url("/assets/loginPage.png");
+    background-size:  100% 100vh;
+}
+.login{
+    width: 500px;
+    height: 500px;
+    margin-left: 50%;
+    margin-top: 20%;
+}
+.login form div label{
+    font-family: 'Ribeye';
+    color: #FFA355;
+    
+}
+.login form div .form-control{
+    border: none;
+    border-bottom: 2px solid #AC1DAF;
+    background-color: #181261;
+}
+h4{
+   opacity: 0;
+}
+.login form div .btn-outline-danger{
+    width: 170px;
+    height: 35px;
+    font-family: 'Ribeye';
+    color: #FFA355;
+    border-color:  #AC1DAF;
+    border-radius: 20px;
+    background-color:#181261;
+}
+.login form div .btn-outline-danger:hover{
+    width: 170px;
+    height: 35px;
+    font-family: 'Ribeye';
+    color:white;
+    border-color: #181261;
+    border-radius: 20px;
+    background-color: #AC1DAF;
+}
